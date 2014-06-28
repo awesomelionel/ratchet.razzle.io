@@ -86,6 +86,10 @@ task :start do
   queue "sudo service nginx restart"
 end
 
+task :bowerize do
+  queue "cd #{deploy_to}/current && bower install"
+end
+
 # For help in making your deploy script, see the Mina documentation:
 #
 #  - http://nadarei.co/mina

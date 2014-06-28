@@ -9,6 +9,7 @@ gem 'guard-livereload'
 gem 'rack-livereload'
 gem 'haml'
 gem 'sass'
+gem 'unicorn'
 
 group :development do
   gem 'pry'

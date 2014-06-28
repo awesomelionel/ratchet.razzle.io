@@ -1,0 +1,22 @@
+%header.bar.bar-nav
+  %a{:data =>{:transition=> 'slide-out'}, :href => "/", :class=>"icon icon-left-nav pull-left" }
+  %h1.title Tab Bars
+
+.content
+  %p.content-padded An example of tab bars. Using push.js to actually change the content of the pages
+  %nav.bar.bar-tab
+    %a{ :class=>"tab-item active", :href => "#" }
+      %span.icon.icon-home
+      %span.tab-label Home
+    %a{ :class=>"tab-item", :href => "#" }
+      %span.icon.icon-person
+      %span.tab-label Profile
+    %a{ :class=>"tab-item", :href => "#" }
+      %span.icon.icon-search
+      %span.tab-label Search
+    %a{ :class=>"tab-item", :href => "#" }
+      %span.icon.icon-star-filled
+      %span.tab-label Favourites
+    %a{ :class=>"tab-item", :href => "#" }
+      %span.icon.icon-gear
+      %span.tab-label Settings

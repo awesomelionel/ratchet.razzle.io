@@ -1,0 +1,12 @@
+{
+  "name": "pure-design",
+  "version": "0.0.1",
+  "private": "true",
+  "dependencies": {
+    "modernizr": "~2.6.2",
+		"font-awesome": "~v4.0.3",
+    "jquery": ">= 2.1.0",
+    "ratchet": "latest",
+		"pure": "latest"
+  }
+}

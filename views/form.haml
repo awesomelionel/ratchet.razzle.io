@@ -1,0 +1,12 @@
+%header.bar.bar-nav
+  %a{:data =>{:transition=> 'slide-out'}, :href => "/", :class=>"icon icon-left-nav pull-left" }
+  %h1.title Form Example
+
+
+.content
+  %form{ :class=> "content-padded", :action => "" }
+    %input{ :type => "text",:placeholder => "Full name" }/
+    %input{ :type => "search",:placeholder => "Search" }/
+    %textarea{ :id => "", :name => "", :rows => "5" }
+    %button{:class => "btn btn-positive btn-block"} Submit
+

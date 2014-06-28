@@ -1,0 +1,16 @@
+%header.bar.bar-nav
+  %a{:data =>{:transition=> 'fade'}, :href => "/", :class=>"icon icon-home pull-left" }
+  %h1.title Home Icon Test
+.content
+  .content-padded
+    %h2.center-align Sign Up
+    .error
+      %p Invalid email
+    .success
+      %p Welcome Aboard!
+    %form{:class=>'input-group', :action => "" }
+      %input{ :type => "email", :placeholder => "cooldude@gmail.com"}/
+      %input{ :type => "password", :placeholder => "Password"}/
+      %input{ :type => "password", :placeholder => "Password Confirmation"}/
+    %button.btn.btn-block.btn-positive Submit
+

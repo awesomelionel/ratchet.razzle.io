@@ -3,8 +3,11 @@ require 'sinatra/reloader'
 require 'sinatra/assetpack'
 
 class App < Sinatra::Base
+  configure :development do
+    register Sinatra::Reloader
+  end
+
   register Sinatra::Flash
-  register Sinatra::Reloader
   register Sinatra::AssetPack
 
   assets do
@@ -19,10 +22,17 @@ class App < Sinatra::Base
       '/bower_components/jquery/dist/jquery.js'
     ]
 
-    js :application, [
-      '/js/app.js',
-      '/js/ratchet.min.js'
-    ]
+    if ENV['RACK_ENV'] == "development"
+      js :application, [
+        '/js/app.js',
+        '/js/ratchet.js'
+      ]
+    else
+      js :application, [
+        '/js/app.js',
+        '/js/ratchet.min.js'
+      ]
+    end
 
     js_compression :jsmin
   end
@@ -49,6 +59,10 @@ class App < Sinatra::Base
 
   get '/slider' do
     haml :slider
+  end
+
+  get '/gohome' do
+    haml :gohome
   end
 
 end

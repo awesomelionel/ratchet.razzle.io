@@ -1,11 +1,12 @@
 -#Make sure all your bars are the first things in your <body>
 %header.bar.bar-nav
   %a{ :href => "#settingsModal", :class=>"icon icon-gear pull-right" }
+  %a{ :href => "#", :class=>"icon icon-home pull-left" }
   %h1.title Ratchet + Sinatra
 
 -#Wrap all non-bar HTML in the .content div (this is actually what scrolls)
 .content
-  .content-padded
+  .content-padded.center-align
     %h3 Ratchet Example App
     %p Use this template to build web apps that feel native. Build on Haml and Sinatra
   .card
@@ -25,6 +26,9 @@
       %li.table-view-cell
         %a{:class=>"push-right", :data => {:transition=> "slide-in"},:href => "/slider" }
           %strong Slider Example
+      %li.table-view-cell
+        %a{:class=>"push-right", :data => {:transition=> "fade"},:href => "/gohome" }
+          %strong Home Example Icon
 
 -#Settings Modal
 #settingsModal.modal
